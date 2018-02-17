@@ -9,7 +9,7 @@
 
 /* @flow */
 
-import { FatalError } from "../../errors.js";
+import { CompilerDiagnostic, FatalError } from "../../errors.js";
 import { Realm } from "../../realm.js";
 import { NativeFunctionValue } from "../../values/index.js";
 import {
@@ -32,10 +32,23 @@ import {
   SetIntegrityLevel,
   HasSomeCompatibleType,
 } from "../../methods/index.js";
-import { Create, Leak, Properties as Props, To } from "../../singletons.js";
+import { Create, Properties as Props, To } from "../../singletons.js";
 import type { BabelNodeExpression } from "babel-types";
 import * as t from "babel-types";
 import invariant from "../../invariant.js";
+
+function ensureShallowlyFrozenValue(realm, value) {
+  // Note: unlike similar code in Leak, this is *intentionally* shallow.
+  if (value instanceof ObjectValue && !TestIntegrityLevel(realm, value, "frozen")) {
+    let diag = new CompilerDiagnostic(
+      "Unfrozen object leaked before end of global code",
+      realm.currentLocation,
+      "PP0017",
+      "RecoverableError"
+    );
+    if (realm.handleError(diag) !== "Recover") throw new FatalError();
+  }
+}
 
 export default function(realm: Realm): NativeFunctionValue {
   // ECMA262 19.1.1.1
@@ -94,19 +107,6 @@ export default function(realm: Realm): NativeFunctionValue {
           frm.makeNotPartial();
         }
 
-        if (to_must_be_partial) {
-          // Generate a residual Object.assign call that copies the
-          // partial properties that we don't know about.
-          AbstractValue.createTemporalFromBuildFunction(
-            realm,
-            ObjectValue,
-            [ObjectAssign, target, nextSource],
-            ([methodNode, targetNode, sourceNode]: Array<BabelNodeExpression>) => {
-              return t.callExpression(methodNode, [targetNode, sourceNode]);
-            }
-          );
-        }
-
         // ii. Let keys be ? from.[[OwnPropertyKeys]]().
         keys = frm.$OwnPropertyKeys();
         if (frm_was_partial) frm.makePartial();
@@ -120,13 +120,6 @@ export default function(realm: Realm): NativeFunctionValue {
           AbstractValue.reportIntrospectionError(nextSource);
           throw new FatalError();
         }
-
-        // If `to` is going to be a partial, we are emitting Object.assign()
-        // calls for each argument. At this point we should not be trying to
-        // assign keys below because that will change the order of the keys on
-        // the resulting object (i.e. the keys assigned later would already be
-        // on the serialized version from the heap).
-        continue;
       }
 
       invariant(frm, "from required");
@@ -165,11 +158,18 @@ export default function(realm: Realm): NativeFunctionValue {
       to.makeSimple();
 
       // If we generated an Object.assign() to deal with partials, by this
-      // point it is not safe to interact with those objects in Prepack land.
+      // point it is not safe to mutate those objects in Prepack land.
+      // Otherwise the residual Object.assign() call would "see" their future
+      // mutations that should've only occurred after it.
       for (let nextSource of sources) {
-        Leak.leakValue(realm, nextSource);
+        ensureShallowlyFrozenValue(realm, nextSource);
       }
-      // TODO #1462: it is not clear if this fix is sufficient.
+      ensureShallowlyFrozenValue(realm, to);
+      // TODO #1462: this fix is likely not enough.
+      // We might need to check the target too for the same reason.
+      // However at that point we might as well throw immediately since it
+      // makes no sense to call Object.assign() with a frozen target.
+      // We need to rethink this strategy.
     }
     return to;
   });
