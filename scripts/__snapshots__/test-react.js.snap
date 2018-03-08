@@ -18,7 +18,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Class component folding Complex class components folding into functional root component #2 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -33,7 +33,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -41,14 +41,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, JSX output Class component folding Complex class components folding into functional root component #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -63,7 +63,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -71,8 +71,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -155,7 +155,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Class component folding Complex class components folding into functional root component #5 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -170,7 +170,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -178,8 +178,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -208,7 +208,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Class component folding Inheritance chaining 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -216,7 +216,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -224,8 +224,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -247,7 +247,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Class component folding Simple classes #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -255,7 +255,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -263,8 +263,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -640,7 +640,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Functional component folding Component type change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -650,7 +650,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -663,7 +663,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -676,8 +676,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -832,7 +832,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Functional component folding Key change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -840,13 +840,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -854,14 +854,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, JSX output Functional component folding Key change with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -869,13 +869,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -883,14 +883,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, JSX output Functional component folding Key nesting 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -900,7 +900,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -913,7 +913,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -926,8 +926,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -991,7 +991,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Functional component folding Key not changing with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -999,13 +999,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -1013,8 +1013,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -1235,7 +1235,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, JSX output Functional component folding Simple 4 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -1243,7 +1243,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -1251,8 +1251,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -1741,7 +1741,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "SomeClassThatShouldNotMakeRootAClass",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -1754,7 +1754,7 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
+  "inlinedComponents": 1,
   "optimizedTrees": 2,
 }
 `;
@@ -2148,7 +2148,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Class component folding Complex class components folding into functional root component #2 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2163,7 +2163,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2171,14 +2171,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, create-element output Class component folding Complex class components folding into functional root component #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2193,7 +2193,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2201,8 +2201,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -2285,7 +2285,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Class component folding Complex class components folding into functional root component #5 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2300,7 +2300,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2308,8 +2308,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -2338,7 +2338,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Class component folding Inheritance chaining 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2346,7 +2346,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2354,8 +2354,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -2377,7 +2377,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Class component folding Simple classes #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2385,7 +2385,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2393,8 +2393,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -2770,7 +2770,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Functional component folding Component type change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2780,7 +2780,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -2793,7 +2793,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -2806,8 +2806,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -2962,7 +2962,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Functional component folding Key change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2970,13 +2970,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -2984,14 +2984,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, create-element output Functional component folding Key change with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -2999,13 +2999,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -3013,14 +3013,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with JSX input, create-element output Functional component folding Key nesting 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -3030,7 +3030,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -3043,7 +3043,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -3056,8 +3056,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -3121,7 +3121,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Functional component folding Key not changing with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -3129,13 +3129,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -3143,8 +3143,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -3365,7 +3365,7 @@ ReactStatistics {
 
 exports[`Test React with JSX input, create-element output Functional component folding Simple 4 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -3373,7 +3373,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -3381,8 +3381,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -3871,7 +3871,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "SomeClassThatShouldNotMakeRootAClass",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -3884,7 +3884,7 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
+  "inlinedComponents": 1,
   "optimizedTrees": 2,
 }
 `;
@@ -4278,7 +4278,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Class component folding Complex class components folding into functional root component #2 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4293,7 +4293,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -4301,14 +4301,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, JSX output Class component folding Complex class components folding into functional root component #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4323,7 +4323,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -4331,8 +4331,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -4415,7 +4415,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Class component folding Complex class components folding into functional root component #5 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4430,7 +4430,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -4438,8 +4438,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -4468,7 +4468,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Class component folding Inheritance chaining 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4476,7 +4476,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -4484,8 +4484,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -4507,7 +4507,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Class component folding Simple classes #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4515,7 +4515,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -4523,8 +4523,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -4900,7 +4900,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Functional component folding Component type change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -4910,7 +4910,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -4923,7 +4923,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -4936,8 +4936,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -5092,7 +5092,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Functional component folding Key change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -5100,13 +5100,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -5114,14 +5114,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, JSX output Functional component folding Key change with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -5129,13 +5129,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -5143,14 +5143,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, JSX output Functional component folding Key nesting 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -5160,7 +5160,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -5173,7 +5173,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -5186,8 +5186,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -5251,7 +5251,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Functional component folding Key not changing with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -5259,13 +5259,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -5273,8 +5273,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -5495,7 +5495,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, JSX output Functional component folding Simple 4 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -5503,7 +5503,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -5511,8 +5511,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -5966,7 +5966,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "SomeClassThatShouldNotMakeRootAClass",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -5979,7 +5979,7 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
+  "inlinedComponents": 1,
   "optimizedTrees": 2,
 }
 `;
@@ -6373,7 +6373,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Class component folding Complex class components folding into functional root component #2 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -6388,7 +6388,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -6396,14 +6396,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, create-element output Class component folding Complex class components folding into functional root component #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -6418,7 +6418,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -6426,8 +6426,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -6510,7 +6510,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Class component folding Complex class components folding into functional root component #5 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -6525,7 +6525,7 @@ ReactStatistics {
           ],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -6533,8 +6533,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 1,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -6563,7 +6563,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Class component folding Inheritance chaining 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -6571,7 +6571,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -6579,8 +6579,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -6602,7 +6602,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Class component folding Simple classes #3 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -6610,7 +6610,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -6618,8 +6618,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -6995,7 +6995,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Functional component folding Component type change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7005,7 +7005,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -7018,7 +7018,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -7031,8 +7031,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -7187,7 +7187,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Functional component folding Key change 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7195,13 +7195,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -7209,14 +7209,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, create-element output Functional component folding Key change with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7224,13 +7224,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -7238,14 +7238,14 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
 exports[`Test React with create-element input, create-element output Functional component folding Key nesting 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 6,
+  "componentsEvaluated": 5,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7255,7 +7255,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -7268,7 +7268,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "Stateful",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -7281,8 +7281,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 2,
-  "optimizedTrees": 2,
+  "inlinedComponents": 4,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -7346,7 +7346,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Functional component folding Key not changing with fragments 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 4,
+  "componentsEvaluated": 3,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7354,13 +7354,13 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
         Object {
           "children": Array [],
           "message": "",
           "name": "Stateful",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -7368,8 +7368,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 2,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -7590,7 +7590,7 @@ ReactStatistics {
 
 exports[`Test React with create-element input, create-element output Functional component folding Simple 4 1`] = `
 ReactStatistics {
-  "componentsEvaluated": 3,
+  "componentsEvaluated": 2,
   "evaluatedRootNodes": Array [
     Object {
       "children": Array [
@@ -7598,7 +7598,7 @@ ReactStatistics {
           "children": Array [],
           "message": "",
           "name": "Child",
-          "status": "NEW_TREE",
+          "status": "INLINED",
         },
       ],
       "message": "",
@@ -7606,8 +7606,8 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
-  "optimizedTrees": 2,
+  "inlinedComponents": 1,
+  "optimizedTrees": 1,
 }
 `;
 
@@ -8061,7 +8061,7 @@ ReactStatistics {
               "children": Array [],
               "message": "",
               "name": "SomeClassThatShouldNotMakeRootAClass",
-              "status": "NEW_TREE",
+              "status": "INLINED",
             },
           ],
           "message": "",
@@ -8074,7 +8074,7 @@ ReactStatistics {
       "status": "ROOT",
     },
   ],
-  "inlinedComponents": 0,
+  "inlinedComponents": 1,
   "optimizedTrees": 2,
 }
 `;

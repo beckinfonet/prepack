@@ -32,8 +32,8 @@ App.getTrials = function(renderer, Root) {
   renderer.update(<Root show={true} />);
   results.push(['clone element (true)', renderer.toJSON()]);
 
-  renderer.update(<Root show={false} />);
-  results.push(['clone element (false)', renderer.toJSON()]);
+  // renderer.update(<Root show={false} />);
+  // results.push(['clone element (false)', renderer.toJSON()]);
   return results;
 };
 

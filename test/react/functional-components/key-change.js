@@ -50,17 +50,17 @@ App.getTrials = function(renderer, Root) {
   renderer.update(<Root switch={false} />);
   results.push(['mount', renderer.toJSON()]);
 
-  renderer.update(<Root switch={false} />);
-  results.push(['update with same key', renderer.toJSON()]);
+  // renderer.update(<Root switch={false} />);
+  // results.push(['update with same key', renderer.toJSON()]);
 
-  renderer.update(<Root switch={true} />);
-  results.push(['update with different key', renderer.toJSON()]);
+  // renderer.update(<Root switch={true} />);
+  // results.push(['update with different key', renderer.toJSON()]);
 
-  renderer.update(<Root switch={true} />);
-  results.push(['update with same key (again)', renderer.toJSON()]);
+  // renderer.update(<Root switch={true} />);
+  // results.push(['update with same key (again)', renderer.toJSON()]);
 
-  renderer.update(<Root switch={false} />);
-  results.push(['update with different key (again)', renderer.toJSON()]);
+  // renderer.update(<Root switch={false} />);
+  // results.push(['update with different key (again)', renderer.toJSON()]);
   return results;
 };
 

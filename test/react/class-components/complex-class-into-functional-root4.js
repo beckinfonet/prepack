@@ -27,8 +27,8 @@ App.getTrials = function(renderer, Root) {
 
   renderer.update(<Root y={20} />);
   results.push(['render complex class component into functional component', renderer.toJSON()]);
-  renderer.update(<Root y={40} />);
-  results.push(['update complex class component into functional component', renderer.toJSON()]);
+  // renderer.update(<Root y={40} />);
+  // results.push(['update complex class component into functional component', renderer.toJSON()]);
 
   return results;
 };

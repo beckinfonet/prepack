@@ -57,17 +57,17 @@ App.getTrials = function(renderer, Root) {
   renderer.update(<Root switch={false} />);
   results.push(['mount', renderer.toJSON()]);
 
-  renderer.update(<Root switch={false} />);
-  results.push(['update with same type', renderer.toJSON()]);
+  // renderer.update(<Root switch={false} />);
+  // results.push(['update with same type', renderer.toJSON()]);
 
-  renderer.update(<Root switch={true} />);
-  results.push(['update with different type', renderer.toJSON()]);
+  // renderer.update(<Root switch={true} />);
+  // results.push(['update with different type', renderer.toJSON()]);
 
-  renderer.update(<Root switch={true} />);
-  results.push(['update with same type (again)', renderer.toJSON()]);
+  // renderer.update(<Root switch={true} />);
+  // results.push(['update with same type (again)', renderer.toJSON()]);
 
-  renderer.update(<Root switch={false} />);
-  results.push(['update with different type (again)', renderer.toJSON()]);
+  // renderer.update(<Root switch={false} />);
+  // results.push(['update with different type (again)', renderer.toJSON()]);
   return results;
 };
 

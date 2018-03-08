@@ -419,7 +419,7 @@ export class Reconciler {
     if (valueIsLegacyCreateClassComponent(this.realm, componentType)) {
       throw new ExpectedBailOut("components created with create-react-class are not supported");
     } else if (valueIsClassComponent(this.realm, componentType)) {
-      if (this.componentTreeConfig.firstRenderOnly) {
+      if (true) {
         value = this._renderClassComponentForFirstRenderOnly(
           componentType,
           props,
