@@ -522,6 +522,11 @@ export class ResidualHeapVisitor {
 
     if (val instanceof BoundFunctionValue) {
       this.visitValue(val.$BoundTargetFunction);
+
+      if (val.$BoundThis.__badBoi) {
+        val.$BoundThis = this.realm.intrinsics.null;
+      }
+
       this.visitValue(val.$BoundThis);
       for (let boundArg of val.$BoundArguments) this.visitValue(boundArg);
       return;
