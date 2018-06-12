@@ -522,11 +522,6 @@ export class ResidualHeapVisitor {
 
     if (val instanceof BoundFunctionValue) {
       this.visitValue(val.$BoundTargetFunction);
-
-      if (val.$BoundThis.__badBoi) {
-        val.$BoundThis = this.realm.intrinsics.null;
-      }
-
       this.visitValue(val.$BoundThis);
       for (let boundArg of val.$BoundArguments) this.visitValue(boundArg);
       return;
@@ -1010,6 +1005,13 @@ export class ResidualHeapVisitor {
   }
 
   visitValue(val: Value): void {
+    if (val.__badBoi) {
+      try {
+        val.$Prototype = this.realm.intrinsics.ObjectPrototype;
+      } catch (err) {}
+      val.properties = new Map();
+    }
+  
     invariant(val !== undefined);
     invariant(!(val instanceof ObjectValue && val.refuseSerialization));
     if (val instanceof AbstractValue) {
