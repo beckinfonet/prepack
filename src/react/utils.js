@@ -832,7 +832,10 @@ export function getValueFromFunctionCall(
   return completion;
 }
 
-function isEventProp(name: string): boolean {
+function isEventProp(name: string, propValue): boolean {
+  if (propValue instanceof FunctionValue) {
+    return true;
+  }
   return name.length > 2 && name[0].toLowerCase() === "o" && name[1].toLowerCase() === "n";
 }
 
@@ -943,8 +946,12 @@ export function cloneProps(
     if (binding && binding.descriptor && binding.descriptor.enumerable) {
       if (newChildren !== undefined && propName === "children") {
         Properties.Set(realm, clonedProps, propName, newChildren, true);
-      } else if (!excludeEventProps || !isEventProp(propName)) {
-        Properties.Set(realm, clonedProps, propName, getProperty(realm, props, propName), true);
+      } else {
+        const propValue = getProperty(realm, props, propName);
+        if (excludeEventProps && isEventProp(propName, propValue)) {
+          continue;
+        }
+        Properties.Set(realm, clonedProps, propName, propValue, true);
       }
     }
   }
