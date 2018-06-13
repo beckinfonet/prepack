@@ -832,8 +832,30 @@ export function getValueFromFunctionCall(
   return completion;
 }
 
-function isEventProp(name: string): boolean {
-  return name.length > 2 && name[0].toLowerCase() === "o" && name[1].toLowerCase() === "n";
+function canExcludeProp(realm, name: string, value): boolean {
+  if (name.length > 2 && name[0].toLowerCase() === "o" && name[1].toLowerCase() === "n") {
+    return true;
+  }
+  if (value instanceof FunctionValue) {
+    return true;
+  }
+  if (
+    name === 'children' ||
+    name === 'style' ||
+    name === 'dangerouslySetInnerHTML'
+  ) {
+    return false;
+  }
+  if (value instanceof ObjectValue) {
+    const toString = Get(realm, value, "toString");
+    if (
+      toString === realm.intrinsics.ObjectProto_toString ||
+      toString === realm.intrinsics.ArrayProto_toString
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
 
 export function sanitizeReactElementForFirstRenderOnly(realm: Realm, reactElement: ObjectValue): ObjectValue {
@@ -943,8 +965,12 @@ export function cloneProps(
     if (binding && binding.descriptor && binding.descriptor.enumerable) {
       if (newChildren !== undefined && propName === "children") {
         Properties.Set(realm, clonedProps, propName, newChildren, true);
-      } else if (!excludeEventProps || !isEventProp(propName)) {
-        Properties.Set(realm, clonedProps, propName, getProperty(realm, props, propName), true);
+      } else {
+        const propValue = getProperty(realm, props, propName); 
+        if (excludeEventProps && canExcludeProp(realm, propName, propValue)) {
+          continue;
+        }
+        Properties.Set(realm, clonedProps, propName, propValue, true);
       }
     }
   }
