@@ -146,7 +146,8 @@ export class Referentializer {
       return "GLOBAL";
     }
     for (let scope of residualBinding.potentialReferentializationScopes) return scope;
-    invariant(false);
+    // invariant(false);
+    return "GLOBAL";
   }
 
   _getSerializedBindingScopeInstance(residualBinding: ResidualFunctionBinding): ScopeBinding {

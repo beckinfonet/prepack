@@ -40,6 +40,8 @@ function applyWriteEffectsForOptimizedComponent(
   writeEffects: WriteEffects,
   environmentRecordIdAfterGlobalCode: number
 ): void {
+  createNoopFunction(realm);
+
   let effects = _effects;
   let additionalFunctionEffects = createAdditionalEffects(
     realm,

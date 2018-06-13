@@ -700,7 +700,9 @@ export class Reconciler {
     let renderMethod = Get(this.realm, instance, "render");
 
     invariant(renderMethod instanceof ECMAScriptSourceFunctionValue);
-    return getValueFromFunctionCall(this.realm, renderMethod, instance, []);
+    const result = getValueFromFunctionCall(this.realm, renderMethod, instance, []);
+    instance.__badBoi = true;
+    return result;
   }
 
   _resolveRelayContainer(
