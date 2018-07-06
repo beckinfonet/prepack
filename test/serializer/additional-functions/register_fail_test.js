@@ -20,4 +20,4 @@ if (global.__optimize && abstract_bool) {
 
 inspect = function() {
   return func1() + func2();
-}
+};
